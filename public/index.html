@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/sketch.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+  <script src="resources/libraries/p5.speech.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.js"></script>
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <!-- preload assets -->
+    <a-assets>
+      <!-- import images -->
+      <img id="eyelash" src="resources/imgs/eyelash.jpg">
+      <img id="eyeshadow2" src="resources/imgs/eyeshadow2.jpg">
+      <img id="g-string" src="resources/imgs/g-string.jpg">
+      <!-- import models -->
+      <!-- <a-asset-item id="octon" src="./assets/models/super-octons.glb"></a-asset-item> -->
+    </a-assets>
+
+
+    <!-- add a 360 photo background -->
+    <!-- <a-sky src="#apple-store"></a-sky> -->
+
+    <!-- create models in the scene -->
+    <!-- <a-entity gltf-model="#octon" scale="1 1 1" position="1.5 18 -2" rotation="5 160 0"></a-entity> -->
+    <!-- <a-entity geometry="primitive: sphere; radius: 1" material="src: #my-video" scale=".5 .5 .5" position="0 1.5 -4"> -->
+    <a-plane position="-2.65089 4.37363 -10.74386" rotation="37.414144022042755 35.58927344455108 158.32657344409066"
+      width="6" height="8" color="#7BC8A4" material="color: #c81500" geometry="width: 3.89; height: 0"
+      scale="1.54 2.75 3" src="#eyelash"></a-plane>
+    <a-box src="#eyelash" position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-box>
+    <a-sphere src="#eyeshadow2" position="0 1.25 -5" radius="1.25"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-sphere>
+    <a-cylinder src="#g-string" position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-cylinder>
+    <a-plane src="#eyeshadow2" position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+    <a-sky color="#ECECEC"></a-sky>
+
+
+  </a-scene>
+</body>
+
+</html>
